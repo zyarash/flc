@@ -1,0 +1,125 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Code Pro", monospace;
+  user-select: none; }
+
+html, body {
+  height: 100%;
+  background: #fffac9;
+  overflow: hidden; }
+
+#loading-screen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #ffc3ce;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em; }
+  #loading-screen > * {
+    z-index: 101; }
+  #loading-screen .sakura {
+    height: 29.5px;
+    text-align: center;
+    transform-origin: center;
+    animation: spin 1.5s linear infinite; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  #loading-screen .loading-text {
+    margin-left: 10px; }
+    #loading-screen .loading-text:after {
+      animation: loading-dots 2s linear infinite;
+      content: "   "; }
+
+@keyframes loading-dots {
+  0% {
+    content: "   "; }
+  25% {
+    content: "   "; }
+  50% {
+    content: ".  "; }
+  75% {
+    content: ".. "; }
+  100% {
+    content: "..."; } }
+
+#main-container {
+  display: flex;
+  height: 100%;
+  padding: 0 15vw;
+  flex-flow: column;
+  flex-wrap: wrap;
+  align-items: center; }
+
+#speech-bubble-container {
+  display: none;
+  width: 100%;
+  flex-grow: 1;
+  padding: 20px 0 100px 0; }
+
+#speech-bubble {
+  display: flex;
+  position: relative;
+  background: #fff;
+  border-radius: 1em;
+  padding: 40px;
+  border: 2px solid #000;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-flow: column; }
+  #speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #fff;
+    border-bottom: 0;
+    margin-left: -20px;
+    margin-bottom: -19px; }
+  #speech-bubble:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 22px solid transparent;
+    border-top-color: #000;
+    border-bottom: 0;
+    margin-left: -22px;
+    margin-bottom: -22px; }
+
+#bunny-container {
+  color: #000;
+  user-select: none;
+  margin-top: auto;
+  padding-top: 50px; }
+
+.STEVE {
+  color: #f00; }
+
+.button {
+  width: 150px;
+  height: 40px;
+  border-radius: 2em;
+  background: #a8e2ff;
+  border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px; }
+  .button:active {
+    box-shadow: 0px 2px; }

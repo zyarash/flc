@@ -1,8 +1,5 @@
 /**************************************************************
- *
  * main.js
- * Website for the upcoming Lee Jennings EP
- *
  **************************************************************/
 
 
@@ -12,7 +9,7 @@ const sass = require("node-sass-middleware")
 
 
 const app = express()
-const port = process.env.PORT || "8003";
+const port = process.env.PORT || "8004";
 
 
 app.set("views", path.join(__dirname, "views"));
@@ -33,6 +30,6 @@ app.get("/", (request, response) => {
 });
 
 app.listen(port, () => {
-    console.log(`Lee Jennigns EP`);
+    console.log(`Festi Lineup Creator`);
     console.log(`Listetning on port ${port}`);
 });
