@@ -29,6 +29,15 @@ app.get("/", (request, response) => {
     response.render("index");
 });
 
+app.get("/spotify", (request, response) => {
+    response.render("spotify");
+});
+
+app.get("/soundcloud", (request, response) => {
+    response.render("soundcloud");
+});
+
+
 app.listen(port, () => {
     console.log(`Festi Lineup Creator`);
     console.log(`Listetning on port ${port}`);
